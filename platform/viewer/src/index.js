@@ -31,6 +31,8 @@ import OHIFDicomPDFExtension from '@ohif/extension-dicom-pdf';
 let config = {};
 const appDefaults = {
   routerBasename: '/',
+  showStudyList: false,
+  whiteLabelling: false,
 };
 
 if (window) {

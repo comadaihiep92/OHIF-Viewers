@@ -87,10 +87,10 @@ class Viewer extends Component {
   }
 
   state = {
-    isLeftSidePanelOpen: true,
+    isLeftSidePanelOpen: false,
     isRightSidePanelOpen: false,
     selectedRightSidePanel: '',
-    selectedLeftSidePanel: 'studies', // TODO: Don't hardcode this
+    selectedLeftSidePanel: '', // TODO: Don't hardcode this
     thumbnails: [],
   };
 
@@ -232,8 +232,8 @@ class Viewer extends Component {
     return (
       <>
         {/* HEADER */}
+        {whiteLabelling => whiteLabelling !== false && (
         <WhiteLabellingContext.Consumer>
-          {whiteLabelling => (
             <UserManagerContext.Consumer>
               {userManager => (
                 <ConnectedHeader home={false} userManager={userManager}>
@@ -241,8 +241,8 @@ class Viewer extends Component {
                 </ConnectedHeader>
               )}
             </UserManagerContext.Consumer>
-          )}
         </WhiteLabellingContext.Consumer>
+        )}
 
         {/* TOOLBAR */}
         <ConnectedToolbarRow

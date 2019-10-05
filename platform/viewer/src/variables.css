@@ -1,6 +1,6 @@
 /* Sizes */
 :root {
-  --top-bar-height: 40px;
+  --top-bar-height: 0px;
   --top-bar-expanded-height: 160px;
   --toolbar-height: 78px;
   --toolbar-drawer-height: 62px;
